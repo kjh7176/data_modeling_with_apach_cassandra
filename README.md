@@ -13,50 +13,33 @@ Currently, there is no easy way to query the data to generate the results, since
 
 ## ETL Pipeline
 - Database Schema Diagram  
-  `music_history`  
+  `song_play`  
   | column | datatype | primary key |
   |:---: | :---:| :---:|
-  |artist| text||
-  |first_name| text||
-  |gender| text||
-  |item_in_session| int|clustering key|
-  |last_name| text||
-  |song_length| float||
-  |level| text||
-  |location| text||
   |session_id| int|partition key|
+  |item_in_session| int|clustering key|
+  |artist| text||
   |song_title| text||
-  |user_id| int||
+  |song_length| float||
   
-  `music_history2`  
+  `user_playhistory`  
   | column | datatype | primary key |
   |:---: | :---:| :---:|
+  |user_id| int|partition key 1|
+  |session_id| int|partition key 2|
+  |item_in_session| int|clustering key|
   |artist| text||
-  |first_name| text||
-  |gender| text||
-  |item_in_session| int|clustering key 2|
-  |last_name| text||
-  |song_length| float||
-  |level| text||
-  |location| text||
-  |session_id| int|clustering key 1|
   |song_title| text||
-  |user_id| int|partition key|
+  |first_name| text||
+  |last_name| text||
   
-  `music_history3`  
+  `song_userlist`  
   | column | datatype | primary key |
   |:---: | :---:| :---:|
-  |artist| text||
-  |first_name| text||
-  |gender| text||
-  |item_in_session| int||
-  |last_name| text||
-  |song_length| float||
-  |level| text||
-  |location| text||
-  |session_id| int||
   |song_title| text|partition key|
-  |user_id| int||
+  |artist| text|clustering key|
+  |first_name| text||
+  |last_name| text||
 
 ## Example
 > Query  
