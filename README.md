@@ -53,7 +53,7 @@ WHERE session_id = 338 and item_in_session = 4
    
 > Query  
 ```
-SELECT artist, song_title, first_name, last_name FROM music_history2 
+SELECT artist, song_title, first_name, last_name FROM user_playhistory 
 WHERE user_id = 10 and session_id = 182
 ```
 > Result  
@@ -62,7 +62,7 @@ WHERE user_id = 10 and session_id = 182
    
 > Query  
 ```
-SELECT first_name, last_name FROM music_history3 
+SELECT first_name, last_name FROM song_userlist 
 WHERE song_title = 'All Hands Against His Own'
 ```
 > Result  
